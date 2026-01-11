@@ -24,11 +24,9 @@ function updateHeroText(corner) {
   const heroTextElement = document.querySelector("#hero-text");
 
   if (corner === "") {
-    heroTextElement.style.top = "calc(0% - 0.25rem)";
-    heroTextElement.style.transform = "translate(-50%, -100%)";
+    heroTextElement.classList.remove("hero-text--pushed");
   } else {
-    heroTextElement.style.top = "calc(100% + 0.25rem)";
-    heroTextElement.style.transform = "translate(-50%, 0)";
+    heroTextElement.classList.add("hero-text--pushed");
   }
 
   switch (corner) {
@@ -86,144 +84,8 @@ let activeCorner = "";
 window.addEventListener("resize", handleWindowResize);
 
 function handleWindowResize() {
-  switch (activeCorner) {
-    case "top-left":
-      if (window.innerWidth <= 1100) {
-        tlActive = "translateX(0) translateY(0)";
-        tlContent.style.transform = "translateX(0vw) translateY(0)";
-        tlContent.style.width = "100vw";
-        tlContent.style.height = "100vh";
-        tlContent.style.top = "0";
-        tlContent.style.display = "flex";
-        tlContent.style.alignItems = "center";
-        tlContent.style.justifyContent = "center";
-        tlContent.style.background = "var(--bg-transparent)";
-        tlContent.style.zIndex = "200";
-        tlBtn.style.zIndex = "300";
-        trBtn.style.zIndex = "100";
-        blBtn.style.zIndex = "100";
-        brBtn.style.zIndex = "100";
-      } else {
-        tlActive = "translateX(0) translateY(0)";
-        tlContent.style.transform = "translateX(0) translateY(0)";
-        tlContent.style.width = "45vw";
-        tlContent.style.height = "90vh";
-        tlContent.style.top = "5vh";
-        tlContent.style.display = "flex";
-      }
-      break;
-
-    case "top-right":
-      if (window.innerWidth <= 1100) {
-        trActive = "translateX(0) translateY(0)";
-        trContent.style.transform = "translateX(0vw) translateY(0)";
-        trContent.style.width = "100vw";
-        trContent.style.height = "100vh";
-        trContent.style.top = "0";
-        trContent.style.display = "flex";
-        trContent.style.alignItems = "center";
-        trContent.style.justifyContent = "center";
-        trContent.style.background = "var(--bg-transparent)";
-        trContent.style.zIndex = "200";
-        trBtn.style.zIndex = "300";
-        tlBtn.style.zIndex = "100";
-        blBtn.style.zIndex = "100";
-        brBtn.style.zIndex = "100";
-      } else {
-        trActive = "translateX(0) translateY(0)";
-        trContent.style.transform = "translateX(0) translateY(0)";
-        trContent.style.width = "45vw";
-        trContent.style.height = "90vh";
-        trContent.style.top = "5vh";
-        trContent.style.display = "flex";
-      }
-      break;
-
-    case "bottom-left":
-      if (window.innerWidth <= 600) {
-        blActive = "translateX(0) translateY(0)";
-        blContent.style.transform = "translateX(0vw) translateY(0)";
-        blContent.style.width = "100vw";
-        blContent.style.height = "100vh";
-        blContent.style.top = "0";
-        blContent.style.display = "flex";
-        blContent.style.alignItems = "center";
-        blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg-transparent)";
-        blContent.style.zIndex = "200";
-        trBtn.style.zIndex = "100";
-        tlBtn.style.zIndex = "100";
-        blBtn.style.zIndex = "300";
-        brBtn.style.zIndex = "100";
-        if (projectOne) projectOne.style.width = "70%";
-        if (projectOne) projectOne.style.margin = "auto auto 0.5rem";
-        if (projectTwo) projectTwo.style.width = "70%";
-        if (projectTwo) projectTwo.style.margin = "auto auto 0.5rem";
-        if (projectThree) projectThree.style.width = "70%";
-        if (projectThree) projectThree.style.margin = "auto auto 0.5rem";
-      } else if (window.innerWidth <= 1100) {
-        blActive = "translateX(0) translateY(0)";
-        blContent.style.transform = "translateX(0vw) translateY(0)";
-        blContent.style.width = "100vw";
-        blContent.style.height = "100vh";
-        blContent.style.top = "0";
-        blContent.style.display = "flex";
-        blContent.style.alignItems = "center";
-        blContent.style.justifyContent = "center";
-        blContent.style.background = "var(--bg-transparent)";
-        blContent.style.zIndex = "200";
-        trBtn.style.zIndex = "100";
-        tlBtn.style.zIndex = "100";
-        blBtn.style.zIndex = "300";
-        brBtn.style.zIndex = "100";
-        if (projectOne) projectOne.style.width = "40%";
-        if (projectOne) projectOne.style.margin = "auto auto 0.5rem";
-        if (projectTwo) projectTwo.style.width = "40%";
-        if (projectTwo) projectTwo.style.margin = "auto auto 0.5rem";
-        if (projectThree) projectThree.style.width = "40%";
-        if (projectThree) projectThree.style.margin = "auto auto 0.5rem";
-      } else {
-        blActive = "translateX(0) translateY(0)";
-        blContent.style.transform = "translateX(0) translateY(0)";
-        blContent.style.width = "45vw";
-        blContent.style.height = "90vh";
-        blContent.style.bottom = "5vh";
-        blContent.style.display = "flex";
-        if (projectOne) projectOne.style.width = "90%";
-        if (projectTwo) projectTwo.style.width = "90%";
-        if (projectThree) projectThree.style.width = "90%";
-      }
-      break;
-
-    case "bottom-right":
-      if (window.innerWidth <= 1100) {
-        brActive = "translateX(0) translateY(0)";
-        brContent.style.transform = "translateX(0vw) translateY(0)";
-        brContent.style.width = "100vw";
-        brContent.style.height = "100vh";
-        brContent.style.bottom = "0";
-        brContent.style.display = "flex";
-        brContent.style.flexDirection = "column";
-        brContent.style.alignItems = "center";
-        brContent.style.justifyContent = "center";
-        brContent.style.background = "var(--bg-transparent)";
-        brContent.style.zIndex = "200";
-        trBtn.style.zIndex = "100";
-        tlBtn.style.zIndex = "100";
-        blBtn.style.zIndex = "100";
-        brBtn.style.zIndex = "300";
-      } else {
-        brActive = "translateX(0) translateY(0)";
-        brContent.style.transform = "translateX(0) translateY(0)";
-        brContent.style.width = "45vw";
-        brContent.style.height = "90vh";
-        brContent.style.bottom = "5vh";
-        brContent.style.display = "flex";
-      }
-      break;
-
-    default:
-  }
+  // Layout is now handled by CSS media queries and .content-active class
+  // This function can be used for extra JS-based logic if needed in the future
 }
 
 let lastReverseAnimation = "";
