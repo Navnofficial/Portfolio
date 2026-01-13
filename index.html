@@ -10,10 +10,13 @@
   <script src="./js/animation.js" defer></script>
   <script src="./js/color-mode.js" defer></script>
   <script src="./js/project-slideshow.js" defer></script>
+  <script src="./js/software-carousel.js" defer></script>
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/animation.css" />
   <link rel="stylesheet" href="./css/color-mode.css" />
   <link rel="stylesheet" href="./css/project-modal.css" />
+  <link rel="stylesheet" href="./css/experience.css" />
+  <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <!-- Google tag (gtag.js) -->
@@ -27,14 +30,41 @@
 
 <body>
   <div id="hero">
+    <!-- Left Professional Context with Introduction -->
+    <div class="hero-context hero-context-left">
+      <h5 class="hero-greeting">Hello I'm</h5>
+      <h1 class="hero-name">Naveen A</h1>
+      <p class="hero-subtitle">VLSI Engineer</p>
+      <div class="context-divider"></div>
+      <p class="context-description">
+        Specialized in digital circuit design and RTL coding.
+        Passionate about creating efficient hardware architectures
+        and optimizing chip performance. Expert in Verilog, SystemVerilog,
+        and FPGA development. Building the future of semiconductor technology
+        one design at a time.
+      </p>
+    </div>
+
     <div id="hero__animation">
       <div id="hero__animation__img">
         <div id="hero-text">
-          <h5 id="hero-greeting">Hello I'm</h5>
-          <h1 id="hero-name">Naveen</h1>
-          <p id="hero-title">VLSI Engineer</p>
+          <h5 class="menu-greeting">Hello I'm</h5>
+          <h1 class="menu-name">Naveen A</h1>
+          <p class="menu-title">VLSI Engineer</p>
         </div>
       </div>
+    </div>
+
+    <!-- Right Professional Context -->
+    <div class="hero-context hero-context-right">
+      <h2 class="context-title">&lt;Hardware Developer /&gt;</h2>
+      <p class="context-description">
+        Embedded systems enthusiast who builds innovative IoT solutions.
+        Experienced in ESP32, Arduino, and custom PCB design.
+        Love creating real-world applications with sensors, wireless
+        communication, and edge computing. Transforming ideas into
+        tangible hardware solutions.
+      </p>
     </div>
   </div>
 
@@ -42,37 +72,240 @@
     <div id="grid__tl">
       <div id="grid__tl__btn">About</div>
       <div id="grid__tl__content">
-        <div class="cards">
-          <div class="cards__content">
-            <a href="./assets/Resume/Naveen@Resume.pdf" download="Naveen_Resume.pdf" style="text-decoration: none;">
-              <article>
-                <img src="./assets/icons/th.jpeg" alt="Education icon" class="icon" />
-                <h2>Resume</h2>
-                <p class="dwn">Download</p>
-              </article>
-            </a>
+        <div class="about-content">
+          <!-- Education -->
+          <div class="about-section">
+            <h3 class="about-section-title">Education</h3>
+            <div class="education-card">
+              <h4>B.E. Electronics Engineering</h4>
+              <p class="education-spec">(VLSI Design & Technology)</p>
+              <p class="education-college">Rajalakshmi Institute of Technology</p>
+              <p class="education-gpa">CGPA: 8.67</p>
+            </div>
           </div>
 
-          <div class="cards__content">
-            <article>
-              <img src="./assets/icons/experience.png" alt="Experience icon" class="icon" />
-              <h2>Experience</h2>
-              <p>
-                6 Months + <br />
-                Developer <br />
-                Experience
-              </p>
-            </article>
+          <!-- Software Skills -->
+          <div class="about-section software-section">
+            <h3 class="about-section-title">Software & Tools</h3>
+            <div class="software-carousel" id="softwareCarousel">
+              <div class="software-track" id="softwareTrack">
+                <!-- C/C++ -->
+                <div class="software-item" data-software="cpp">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/C++.png" alt="C++" />
+                  </div>
+                  <span class="software-name">C / C++</span>
+                </div>
+
+                <!-- Python -->
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/py.png" alt="Python" />
+                  </div>
+                  <span class="software-name">Python</span>
+                </div>
+
+                <!-- LT Spice -->
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/LT.png" alt="LT Spice" />
+                  </div>
+                  <span class="software-name">LT Spice</span>
+                </div>
+
+                <!-- EasyEDA -->
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/easyeda.png" alt="EasyEDA" />
+                  </div>
+                  <span class="software-name">EasyEDA</span>
+                </div>
+
+                <!-- Verilog -->
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/V.png" alt="Verilog" />
+                  </div>
+                  <span class="software-name">Verilog</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/sv.png" alt="SystemVerilog" />
+                  </div>
+                  <span class="software-name">SystemVerilog</span>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="software-item" data-software="cpp">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/C++.png" alt="C++" />
+                  </div>
+                  <span class="software-name">C / C++</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/py.png" alt="Python" />
+                  </div>
+                  <span class="software-name">Python</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/LT.png" alt="LT Spice" />
+                  </div>
+                  <span class="software-name">LT Spice</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/easyeda.png" alt="EasyEDA" />
+                  </div>
+                  <span class="software-name">EasyEDA</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/V.png" alt="Verilog" />
+                  </div>
+                  <span class="software-name">Verilog</span>
+                </div>
+
+                <div class="software-item">
+                  <div class="software-icon">
+                    <img src="./assets/Software_icon/sv.png" alt="SystemVerilog" />
+                  </div>
+                  <span class="software-name">SystemVerilog</span>
+                </div>
+
+              </div>
+            </div>
           </div>
 
-          <div class="cards__content">
-            <article>
-              <img src="./assets/icons/education.png" alt="Education icon" class="icon" />
-              <h2>Education</h2>
-              <p>B. Sc. IT</p>
-              <p>7.72 GPA | Grade A</p>
-            </article>
+          <!-- Certificates -->
+          <div class="about-section cert-section">
+            <h3 class="about-section-title">Certificates</h3>
+            <div class="cert-grid">
+              <a href="https://drive.google.com/file/d/1inu1wo_WzzXyY8JnzI7vZyuO6kBaboru/view?usp=drive_link"
+                target="_blank" class="cert-card">
+                <div class="cert-image">
+                  <img src="./assets/Cerficates/Digital electronics.png" alt="Digital Circuits Certificate" />
+                </div>
+                <div class="cert-info">
+                  <h4>Digital Circuits</h4>
+                  <p>NPTEL</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1BsAjMz96I3V0w1lMr46IpBtGiDsI-jKH/view?usp=sharing"
+                target="_blank" class="cert-card">
+                <div class="cert-image">
+                  <img src="./assets/Cerficates/mpmc.png" alt="Microprocessor Certificate" />
+                </div>
+                <div class="cert-info">
+                  <h4>Microprocessor & Microcontroller</h4>
+                  <p>NPTEL</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/14bjO0Fe4uzTSyJFFIQnLlNiIw433VVI4/view?usp=sharing"
+                target="_blank" class="cert-card">
+                <div class="cert-image">
+                  <img src="./assets/Cerficates/Verilog.png" alt="Verilog Certificate" />
+                </div>
+                <div class="cert-info">
+                  <h4>System Design through Verilog</h4>
+                  <p>NPTEL</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1SCYqN4O8TeQBz0B_FCzcgiZD1_9fLqWv/view?usp=sharing"
+                target="_blank" class="cert-card">
+                <div class="cert-image">
+                  <img src="./assets/Cerficates/Emb.png" alt="Embedded Systems Certificate" />
+                </div>
+                <div class="cert-info">
+                  <h4>Embedded Systems for Beginners</h4>
+                  <p>NIELIT</p>
+                </div>
+              </a>
+            </div>
           </div>
+
+
+
+          <!-- Hackathons & Expo -->
+          <div class="about-section hackathon-section">
+            <h3 class="about-section-title">Hackathons & Expo</h3>
+            <div class="hackathon-grid">
+              <a href="https://www.linkedin.com/posts/navnofficial_sih-smartindiahackathon-engineeringlife-activity-7408462506559438848-owiJ?utm_source=share&utm_medium=member_desktop"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/sih.jpeg" alt="Smart India Hackathon" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Smart India Hackathon</h4>
+                  <p>Finalist</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/10vl1f1oUh3kz-sShkwlwFHuCdH0nBWtd/view?usp=sharing"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/lam.png" alt="Lam Research Challenge" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Lam Research Talent Challenge</h4>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1FMV5PIhEnNAKnOv2NfulxGjNPvMpIWMH/view?usp=sharing"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/smart inno hack.jpeg" alt="Smart Innovative Hackathon" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Smart Innovative Hackathon</h4>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1VmtGE56NDmWf12AWy6DpZWmXAVXRA8LM/view?usp=sharing"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/circuit debugging.jpg" alt="Circuit Designing Competition" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Circuit Designing Competition</h4>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1hR0Xf2swsxzUI4f4liGufF6f8z7NdcX5/view?usp=sharing"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/Techgium.png" alt="Techigium" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Techigium</h4>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/posts/rit-chennai_ritinnovators-inspiration-innovation-activity-7256287283530678273-8HC9?utm_source=share&utm_medium=member_desktop"
+                target="_blank" class="hackathon-card">
+                <div class="hackathon-image">
+                  <img src="./assets/Cerficates/young innovators hack.jpeg" alt="Young Innovators Project Expo" />
+                </div>
+                <div class="hackathon-info">
+                  <h4>Young Innovators Project Expo</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Area of Expertise -->
+          <div class="about-section">
+            <h3 class="about-section-title">Area of Expertise</h3>
+            <div class="about-tags">
+              <span class="about-tag expertise-tag">IoT - Embedded Systems</span>
+              <span class="about-tag expertise-tag">Digital Electronics</span>
+              <span class="about-tag expertise-tag">PCB Design</span>
+              <span class="about-tag expertise-tag">VLSI - RTL Design and Microcontroller</span>
+              <span class="about-tag expertise-tag">3D modeling</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -80,84 +313,79 @@
     <div id="grid__tr">
       <div id="grid__tr__btn">Experience</div>
       <div id="grid__tr__content">
-        <div class="cards experience">
-          <article class="experience__skill">
-            <h2>Frontend Development</h2>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>JavaScript</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>React JS</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>Java</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>HTML - CSS</h2>
-                <p>Experienced</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>Figma</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-          </article>
+        <div class="experience-content">
 
-          <article class="experience__skill">
-            <h2>Backend Development</h2>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>MongoDB</h2>
-                <p>Basic</p>
+          <!-- Work Experience -->
+          <div class="exp-section work-exp-section">
+            <h3 class="exp-section-title">Experience</h3>
+
+            <div class="exp-item">
+              <div class="exp-image">
+                <img src="./assets/xp/spinacle.jpeg" alt="Spinacle Technologies Internship" />
+              </div>
+              <div class="exp-content">
+                <div class="exp-header">
+                  <h4 class="exp-title">Research and Development Intern</h4>
+                  <span class="exp-duration">01/2025 - 06/2025</span>
+                </div>
+                <p class="exp-company">Spinacle Technologies Private Limited, Chennai, India</p>
+                <ul class="exp-responsibilities">
+                  <li>Developed IoT sensor-based systems using Raspberry Pi 5, ESP32 for real-time data monitoring of
+                    Gut
+                    Health</li>
+                  <li>Integrated Azure Cloud for secure storage and management of data</li>
+                  <li>Implemented wireless communication protocols for seamless data transmission</li>
+                  <li>Collaborated with cross-functional teams on embedded systems development</li>
+                </ul>
+                <div class="exp-tech">
+                  <span class="tech-tag">Raspberry Pi 5</span>
+                  <span class="tech-tag">ESP32</span>
+                  <span class="tech-tag">Azure Cloud</span>
+                  <span class="tech-tag">IoT</span>
+                  <span class="tech-tag">Embedded Systems</span>
+                </div>
               </div>
             </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>MySQL</h2>
-                <p>Basic</p>
-              </div>
+
+          </div>
+
+          <!-- Achievements & Leadership -->
+          <div class="exp-section achievement-section">
+            <h3 class="exp-section-title">Achievements & Leadership</h3>
+            <div class="achievement-list">
+              <a href="https://drive.google.com/file/d/1W4Di-9HDT4Konm7gclAmD5zap95bvFXq/view?usp=sharing"
+                target="_blank" class="achievement-item">
+                <div class="achievement-image">
+                  <img src="./assets/Achi/Best oveall per.jpg" alt="Best Overall Performer Award" />
+                </div>
+                <div class="achievement-content">
+                  <h3>Best Overall Performer Award</h3>
+                  <p>Rajalakshmi Institute of Technology</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1KYgafJOewD4uM9gyHtUT5w_Eaj4gd6s1/view?usp=sharing"
+                target="_blank" class="achievement-item">
+                <div class="achievement-image">
+                  <img src="./assets/Achi/pcb.jpeg" alt="PCB Workshop" />
+                </div>
+                <div class="achievement-content">
+                  <h3>Conducted PCB Workshop</h3>
+                  <p>Rajalakshmi Institute of Technology</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/file/d/1SGnna1HDWj8WpQOkOuFtMBwGwzOk2tkx/view?usp=sharing"
+                target="_blank" class="achievement-item">
+                <div class="achievement-image">
+                  <img src="./assets/Achi/ups.jpeg" alt="UPS Technology Day" />
+                </div>
+                <div class="achievement-content">
+                  <h3>Participation - UPS Technology Day</h3>
+                  <p>UPS Technology Group, Inc</p>
+                </div>
+              </a>
             </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>Node JS</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>Express JS</h2>
-                <p>Intermediate</p>
-              </div>
-            </div>
-            <div>
-              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
-              <div>
-                <h2>Git</h2>
-                <p>Basic</p>
-              </div>
-            </div>
-          </article>
+          </div>
+
         </div>
       </div>
     </div>
@@ -342,8 +570,7 @@
       <div id="grid__br__btn">Contact</div>
       <div id="grid__br__content" class="contact-grid-bg">
         <div class="contact-header">
-          <i class="fa-regular fa-envelope"></i>
-          <h2 class="contact-title">Get In Touch</h2>
+          <h3 class="contact-title">Get In Touch</h3>
           <p class="contact-subtitle-text">I'm always interested in new opportunities and collaborations. Feel free to
             reach out if you'd like to discuss a project or just say hello!</p>
         </div>
@@ -388,40 +615,32 @@
             </div>
 
             <div class="contact-info">
-              <h3 class="contact-name">Naveen</h3>
+              <h3 class="contact-name">Naveen A</h3>
             </div>
-
-            <h3 class="section-heading">Get In Touch</h3>
-            <p class="section-subtext">Here are the best ways to reach me.</p>
 
             <div class="contact-details">
               <div class="contact-detail-item">
                 <i class="fa-solid fa-envelope"></i>
                 <div>
-                  <span class="detail-label">Email</span>
                   <a href="mailto:navnofficial@gmail.com">navnofficial@gmail.com</a>
                 </div>
               </div>
               <div class="contact-detail-item">
                 <i class="fa-solid fa-phone"></i>
                 <div>
-                  <span class="detail-label">Phone</span>
                   <a href="tel:+917871631774">+91 7871631774</a>
                 </div>
               </div>
             </div>
 
-            <h3 class="section-heading" style="margin-top: 2rem;">Follow Me</h3>
-            <p class="section-subtext">Connect with me on social media and professional platforms.</p>
+
 
             <div class="contact-social-menu">
               <a href="https://github.com/Navnofficial" target="_blank" class="social-link">
                 <i class="fa-brands fa-github github"></i>
-                <span>GitHub</span>
               </a>
               <a href="https://www.linkedin.com/in/navnofficial/" target="_blank" class="social-link">
                 <i class="fa-brands fa-linkedin linkedin"></i>
-                <span>LinkedIn</span>
               </a>
             </div>
           </div>

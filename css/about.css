@@ -1,0 +1,521 @@
+/* ABOUT SECTION STYLES */
+
+.about-content {
+    padding: 2rem;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for about-content */
+.about-content::-webkit-scrollbar {
+    display: none;
+}
+
+.about-content {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.about-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border-left: 3px solid #f3f3f5;
+    transition: all 0.3s ease;
+}
+
+.about-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+/* Software Section - Blue */
+.software-section {
+    border-left-color: #60a5fa;
+    background: rgba(96, 165, 250, 0.05);
+}
+
+.software-section:hover {
+    background: rgba(96, 165, 250, 0.08);
+    box-shadow: 0 8px 24px rgba(96, 165, 250, 0.904);
+}
+
+/* Certificates Section - Green */
+.about-section:has(.cert-tag) {
+    border-left-color: #4ade80;
+    background: rgba(74, 222, 128, 0.05);
+}
+
+.about-section:has(.cert-tag):hover {
+    background: rgba(74, 222, 128, 0.08);
+    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.959);
+}
+
+/* Expertise Section - Purple */
+.about-section:has(.expertise-tag) {
+    border-left-color: #a855f7;
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.about-section:has(.expertise-tag):hover {
+    background: rgba(168, 85, 247, 0.08);
+    box-shadow: 0 8px 24px rgba(169, 85, 247, 0.979);
+}
+
+/* Hackathons Section - Orange */
+.about-section:has(.about-list) {
+    border-left-color: #fb923c;
+    background: rgba(251, 146, 60, 0.05);
+}
+
+.about-section:has(.about-list):hover {
+    background: rgba(251, 146, 60, 0.08);
+    box-shadow: 0 8px 24px rgba(255, 156, 75, 0.897);
+}
+
+/* Education Section - Teal */
+.about-section:has(.education-card) {
+    border-left-color: #14b8a6;
+    background: rgba(20, 184, 166, 0.05);
+}
+
+.about-section:has(.education-card):hover {
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: 0 8px 24px rgba(20, 184, 166, 0.8);
+}
+
+.about-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Certificate Section */
+.cert-section {
+    border-left-color: #4ade80;
+    background: rgba(74, 222, 128, 0.05);
+}
+
+.cert-section:hover {
+    background: rgba(74, 222, 128, 0.08);
+    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.4);
+}
+
+.cert-section .about-section-title {
+    border-bottom-color: rgba(74, 222, 128, 0.3);
+}
+
+/* Certificate Grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(74, 222, 128, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.5);
+    box-shadow: 0 8px 20px rgba(74, 222, 128, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.cert-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover .cert-image img {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.cert-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4ade80;
+    margin: 0;
+}
+
+.cert-info p {
+    font-size: 0.85rem;
+    color: #86efac;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Hackathon Section */
+.hackathon-section {
+    border-left-color: #fb923c;
+    background: rgba(251, 146, 60, 0.05);
+}
+
+.hackathon-section:hover {
+    background: rgba(251, 146, 60, 0.08);
+    box-shadow: 0 8px 24px rgba(251, 146, 60, 0.4);
+}
+
+.hackathon-section .about-section-title {
+    border-bottom-color: rgba(251, 146, 60, 0.3);
+}
+
+/* Hackathon Grid */
+.hackathon-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hackathon-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid rgba(251, 146, 60, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+
+.hackathon-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(251, 146, 60, 0.4);
+    transform: translateX(5px);
+}
+
+.hackathon-image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(251, 146, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hackathon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.hackathon-card:hover .hackathon-image {
+    border-color: rgba(251, 146, 60, 0.6);
+    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+}
+
+.hackathon-card:hover .hackathon-image img {
+    transform: scale(1.05);
+}
+
+.hackathon-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hackathon-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fb923c;
+    margin: 0;
+    text-align: left;
+}
+
+.hackathon-info p {
+    font-size: 0.85rem;
+    color: #fdba74;
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+}
+
+.about-section:has(.expertise-tag) .about-section-title {
+    border-bottom-color: rgba(168, 85, 247, 0.3);
+}
+
+.about-section:has(.about-list) .about-section-title {
+    border-bottom-color: rgba(251, 146, 60, 0.3);
+}
+
+.about-section:has(.education-card) .about-section-title {
+    border-bottom-color: rgba(20, 184, 166, 0.3);
+}
+
+/* Tags Styling */
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.about-tag {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.about-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Software Tags - Blue */
+.software-tag {
+    background: #1e3a8a;
+    color: #c4c7ca;
+    border: 1px solid #e3e8f1;
+}
+
+.software-tag:hover {
+    background: #bec4da;
+}
+
+/* Certificate Tags - Green */
+.cert-tag {
+    background: #14532d;
+    color: #86efac;
+    border: 1px solid #22c55e;
+}
+
+.cert-tag:hover {
+    background: #166534;
+}
+
+/* Expertise Tags - Purple */
+.expertise-tag {
+    background: #581c87;
+    color: #d8b4fe;
+    border: 1px solid #a855f7;
+}
+
+.expertise-tag:hover {
+    background: #6b21a8;
+}
+
+/* List Styling */
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.about-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: #d0d0d0;
+    font-size: 0.95rem;
+}
+
+.about-bullet {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Education Card */
+.education-card {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.education-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.education-spec {
+    font-size: 0.95rem;
+    color: #a0b0ff;
+    margin: 0.25rem 0;
+}
+
+.education-college {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin: 0.25rem 0;
+}
+
+.education-gpa {
+    font-size: 0.95rem;
+    color: #667eea;
+    font-weight: 600;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .about-content {
+        padding: 1rem;
+    }
+
+    .about-section {
+        padding: 1rem;
+    }
+
+    .about-section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Software Carousel Styles */
+.software-section {
+    overflow: hidden;
+}
+
+.software-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+/* Hide scrollbar but keep functionality */
+.software-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.software-carousel {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.software-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+}
+
+.software-track:hover {
+    animation-play-state: paused;
+}
+
+.software-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 100px;
+    padding: 1rem;
+    background: rgba(30, 58, 138, 0.3);
+    border-radius: 12px;
+    border: 2px solid #c3c9d3;
+    transition: all 0.3s ease;
+}
+
+.software-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(30, 64, 175, 0.4);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.software-icon {
+    font-size: 2.5rem;
+    color: #93c5fd;
+    transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.software-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.software-item:hover .software-icon {
+    color: #60a5fa;
+    transform: scale(1.1);
+}
+
+.software-item:hover .software-icon img {
+    transform: scale(1.1);
+}
+
+.software-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #93c5fd;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments for carousel */
+@media screen and (max-width: 768px) {
+    .software-item {
+        min-width: 80px;
+        padding: 0.75rem;
+    }
+
+    .software-icon {
+        font-size: 2rem;
+    }
+
+    .software-name {
+        font-size: 0.75rem;
+    }
+
+    .software-track {
+        gap: 1.5rem;
+    }
+}

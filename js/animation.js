@@ -1,8 +1,14 @@
 // Define DOM elements
 const heroImage = document.querySelector("#hero__animation__img");
-const heroGreeting = document.querySelector("#hero-greeting");
-const heroName = document.querySelector("#hero-name");
-const heroTitle = document.querySelector("#hero-title");
+const heroGreeting = document.querySelector(".hero-greeting");
+const heroName = document.querySelector(".hero-name");
+const heroTitle = document.querySelector(".hero-subtitle");
+const heroContextLeft = document.querySelector(".hero-context-left");
+const heroContextRight = document.querySelector(".hero-context-right");
+const heroTextElement = document.querySelector("#hero-text");
+const menuGreeting = document.querySelector(".menu-greeting");
+const menuName = document.querySelector(".menu-name");
+const menuTitle = document.querySelector(".menu-title");
 
 const tl = document.querySelector("#grid__tl");
 const tr = document.querySelector("#grid__tr");
@@ -21,39 +27,44 @@ const brContent = document.querySelector("#grid__br__content");
 
 // Function to update hero text
 function updateHeroText(corner) {
-  const heroTextElement = document.querySelector("#hero-text");
-
-  if (corner === "") {
-    heroTextElement.classList.remove("hero-text--pushed");
-  } else {
-    heroTextElement.classList.add("hero-text--pushed");
+  // Show/hide hero-text based on whether a menu is open
+  if (heroTextElement) {
+    if (corner === "") {
+      heroTextElement.classList.remove("hero-text--pushed");
+      heroTextElement.style.display = "none";
+    } else {
+      heroTextElement.classList.add("hero-text--pushed");
+      heroTextElement.style.display = "block";
+    }
   }
+
+  if (!menuGreeting || !menuName || !menuTitle) return;
 
   switch (corner) {
     case "top-left":
-      heroGreeting.textContent = "About Me";
-      heroName.textContent = "Naveen";
-      heroTitle.textContent = "My Background";
+      menuGreeting.textContent = "About Me";
+      menuName.textContent = "Naveen A";
+      menuTitle.textContent = "My Background";
       break;
     case "top-right":
-      heroGreeting.textContent = "My Skills";
-      heroName.textContent = "Naveen";
-      heroTitle.textContent = "Technical Expertise";
+      menuGreeting.textContent = "My Skills";
+      menuName.textContent = "Naveen A";
+      menuTitle.textContent = "Technical Expertise";
       break;
     case "bottom-left":
-      heroGreeting.textContent = "My Work";
-      heroName.textContent = "Naveen";
-      heroTitle.textContent = "Projects Portfolio";
+      menuGreeting.textContent = "My Work";
+      menuName.textContent = "Naveen A";
+      menuTitle.textContent = "Projects Portfolio";
       break;
     case "bottom-right":
-      heroGreeting.textContent = "Get In Touch";
-      heroName.textContent = "Naveen";
-      heroTitle.textContent = "Let's Connect";
+      menuGreeting.textContent = "Get In Touch";
+      menuName.textContent = "Naveen A";
+      menuTitle.textContent = "Let's Connect";
       break;
     default:
-      heroGreeting.textContent = "Hello I'm";
-      heroName.textContent = "Naveen";
-      heroTitle.textContent = "VLSI Engineer";
+      menuGreeting.textContent = "Hello I'm";
+      menuName.textContent = "Naveen A";
+      menuTitle.textContent = "VLSI Engineer";
   }
 }
 
@@ -160,6 +171,10 @@ function playClosingAnimation(reverseAnimation) {
     default:
   }
 
+  // Show context boxes when returning to home
+  if (heroContextLeft) heroContextLeft.style.display = "block";
+  if (heroContextRight) heroContextRight.style.display = "block";
+
   heroImage.className = "";
   lastReverseAnimation = "";
   lastSide = "";
@@ -168,13 +183,17 @@ function playClosingAnimation(reverseAnimation) {
   heroImage.classList.add(reverseAnimation);
   setTimeout(function () {
     heroImage.classList.remove(reverseAnimation);
-  }, 200);
+  }, 600); // Increased from 200ms to 600ms for smoother animation
 }
 
 tlBtn.onclick = function () {
   if (activeCorner === "top-left") {
     playClosingAnimation("reverse-animate-top-left");
   } else {
+    // Hide context boxes when menu is opened
+    if (heroContextLeft) heroContextLeft.style.display = "none";
+    if (heroContextRight) heroContextRight.style.display = "none";
+
     trBtn.innerHTML = "Experience";
     blBtn.innerHTML = "Projects";
     brBtn.innerHTML = "Contact";
@@ -206,6 +225,10 @@ trBtn.onclick = function () {
   if (activeCorner === "top-right") {
     playClosingAnimation("reverse-animate-top-right");
   } else {
+    // Hide context boxes when menu is opened
+    if (heroContextLeft) heroContextLeft.style.display = "none";
+    if (heroContextRight) heroContextRight.style.display = "none";
+
     tlBtn.innerHTML = "About";
     blBtn.innerHTML = "Projects";
     brBtn.innerHTML = "Contact";
@@ -237,6 +260,10 @@ blBtn.onclick = function () {
   if (activeCorner === "bottom-left") {
     playClosingAnimation("reverse-animate-bottom-left");
   } else {
+    // Hide context boxes when menu is opened
+    if (heroContextLeft) heroContextLeft.style.display = "none";
+    if (heroContextRight) heroContextRight.style.display = "none";
+
     tlBtn.innerHTML = "About";
     trBtn.innerHTML = "Experience";
     brBtn.innerHTML = "Contact";
@@ -273,6 +300,10 @@ brBtn.onclick = function () {
   if (activeCorner === "bottom-right") {
     playClosingAnimation("reverse-animate-bottom-right");
   } else {
+    // Hide context boxes when menu is opened
+    if (heroContextLeft) heroContextLeft.style.display = "none";
+    if (heroContextRight) heroContextRight.style.display = "none";
+
     tlBtn.innerHTML = "About";
     trBtn.innerHTML = "Experience";
     blBtn.innerHTML = "Projects";

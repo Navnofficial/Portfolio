@@ -1,0 +1,343 @@
+/* EXPERIENCE SECTION STYLES */
+
+.experience-content {
+    padding: 2rem;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for experience-content */
+.experience-content::-webkit-scrollbar {
+    display: none;
+}
+
+.experience-content {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.exp-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border-left: 3px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.exp-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.exp-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Work Experience Section */
+.work-exp-section {
+    border-left-color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.work-exp-section:hover {
+    background: rgba(102, 126, 234, 0.08);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.work-exp-section .exp-section-title {
+    border-bottom-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Experience Item */
+.exp-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.exp-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(102, 126, 234, 0.4);
+    transform: translateX(5px);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+}
+
+.exp-duration {
+    font-size: 0.85rem;
+    color: #667eea;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 20px;
+}
+
+.exp-company {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #b0b0b0;
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+
+.exp-responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+
+.exp-responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.exp-responsibilities li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.exp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    background: rgba(102, 126, 234, 0.15);
+    color: #a0b0ff;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Achievement Section */
+.achievement-section {
+    border-left-color: #fbbf24;
+    background: rgba(251, 191, 36, 0.05);
+}
+
+.achievement-section:hover {
+    background: rgba(251, 191, 36, 0.08);
+    box-shadow: 0 8px 24px rgba(251, 191, 36, 0.4);
+}
+
+.achievement-section .exp-section-title {
+    border-bottom-color: rgba(251, 191, 36, 0.3);
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    transition: all 0.3s ease;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.achievement-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(251, 191, 36, 0.4);
+    transform: translateX(5px);
+}
+
+.exp-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.exp-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.exp-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(102, 126, 234, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.exp-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.exp-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    pointer-events: none;
+}
+
+.exp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.exp-item:hover .exp-image {
+    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.exp-item:hover .exp-image img {
+    transform: scale(1.03);
+}
+
+.exp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.achievement-image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    transition: all 0.3s ease;
+}
+
+.achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover .achievement-image {
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.achievement-item:hover .achievement-image img {
+    transform: scale(1.05);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.achievement-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin: 0 0 0.25rem 0;
+    text-align: left;
+}
+
+.achievement-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+}
+
+.achievement-content p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin: 0 0 0.25rem 0;
+    text-align: left;
+}
+
+.achievement-date {
+    font-size: 0.8rem;
+    color: #667eea;
+    font-style: italic;
+    text-align: left;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .experience-content {
+        padding: 1rem;
+    }
+
+    .exp-section {
+        padding: 1rem;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+}
