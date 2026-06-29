@@ -41,7 +41,7 @@ body {
   color: var(--text-body);
   background: var(--bg-section);
   line-height: 1.7;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 @media (min-width: 992px) {
@@ -56,10 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
 }
 
-h1 { font-size: 5.5rem; line-height: 1; }
-h2 { font-size: 3.2rem; }
-h3 { font-size: 1.9rem; }
-h4 { font-size: 1.4rem; }
+h1 { font-size: 4.2rem; line-height: 1; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.2rem; }
 
 p { color: var(--text-body); }
 
@@ -540,16 +540,16 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   #about { text-align: center; }
   #about .list-social-icons { justify-content: center; display: flex; }
   #about .expertise-tags { justify-content: center; }
-  #about h1 { font-size: 3.2rem; }
-  h2 { font-size: 2.2rem; }
+  #about h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.0rem; }
   .about-header-row { flex-direction: column; align-items: center; }
   .contact-wrapper { grid-template-columns: 1fr; }
   .recommendation-block { text-align: left; }
 }
 
 @media (max-width: 575px) {
-  #about h1 { font-size: 2.6rem; }
-  h2 { font-size: 1.8rem; }
+  #about h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.5rem; }
   .certs-grid { grid-template-columns: 1fr; }
   .recommendation-block { padding: 1.25rem 1rem; }
 }
