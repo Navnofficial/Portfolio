@@ -37,7 +37,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  padding-top: 54px;
+  padding-top: 56px;
   color: var(--text-body);
   background: var(--bg-section);
   line-height: 1.7;
@@ -129,10 +129,10 @@ a:hover, a:focus { color: var(--primary-dark); text-decoration: none; }
    ============================================================ */
 section.resume-section {
   border-bottom: 1px solid var(--border);
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding: 3.5rem 1.25rem !important;
   background: var(--bg-section);
   transition: background 0.3s;
+  scroll-margin-top: 56px;
 }
 section.resume-section:nth-child(even) { background: var(--bg-alt); }
 section.resume-section .resume-item .resume-date { min-width: none; }
@@ -141,7 +141,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   section.resume-section .resume-item .resume-date { min-width: 10rem; }
 }
 @media (min-width: 992px) {
-  section.resume-section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  section.resume-section { padding: 5rem 3rem !important; scroll-margin-top: 0; }
 }
 
 .bg-primary { background-color: var(--primary) !important; }
@@ -537,15 +537,21 @@ section.resume-section .resume-item .resume-date { min-width: none; }
    Mobile Responsive Tweaks
    ============================================================ */
 @media (max-width: 991px) {
-  #about h1 { font-size: 3.5rem; }
-  h2 { font-size: 2.5rem; }
-  .about-header-row { flex-direction: column; }
+  #about { text-align: center; }
+  #about .list-social-icons { justify-content: center; display: flex; }
+  #about .expertise-tags { justify-content: center; }
+  #about h1 { font-size: 3.2rem; }
+  h2 { font-size: 2.2rem; }
+  .about-header-row { flex-direction: column; align-items: center; }
   .contact-wrapper { grid-template-columns: 1fr; }
+  .recommendation-block { text-align: left; }
 }
 
 @media (max-width: 575px) {
-  #about h1 { font-size: 2.8rem; }
+  #about h1 { font-size: 2.6rem; }
+  h2 { font-size: 1.8rem; }
   .certs-grid { grid-template-columns: 1fr; }
+  .recommendation-block { padding: 1.25rem 1rem; }
 }
 
 /* ============================================================
