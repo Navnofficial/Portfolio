@@ -552,6 +552,21 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   h2 { font-size: 1.5rem; }
   .certs-grid { grid-template-columns: 1fr; }
   .recommendation-block { padding: 1.25rem 1rem; }
+
+  /* Horizontal scrolling for skills on mobile to save vertical space */
+  .skills-icon-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .skills-icon-list::-webkit-scrollbar {
+    display: none;
+  }
+  .skill-chip {
+    white-space: nowrap;
+  }
 }
 
 /* ============================================================
